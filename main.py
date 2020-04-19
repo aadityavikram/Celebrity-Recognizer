@@ -1,12 +1,12 @@
 import torch
 import numpy as np
+from test import test
 from torch import nn, optim
+from load_data import load_data
 from torch.autograd import Variable
 from time import time, strftime, gmtime
 from torchvision.models import resnet50
-from celeb_detection.load_data import load_data
-from celeb_detection.test import test
-from celeb_detection.utility import visualize, save_checkpoint, save_metric
+from utility import visualize, save_checkpoint, save_metric
 
 
 def train(num_epochs=10, data_loader=None, optimizer=None, device='cuda', model=None, criterion=None, mod=50, batch_size=32):
